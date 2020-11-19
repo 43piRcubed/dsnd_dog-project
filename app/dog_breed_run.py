@@ -45,6 +45,13 @@ app.config['SESSION_TYPE'] = 'filesystem'
 
 
 def load_data_models():
+    '''
+    This function loads data and classifiers:
+    - It loads a list of dog_names that was previously saved
+    - It loads the Cascade Classifier for the face detection function
+    - It loads the ResNet50 model for the dog dtection function
+    - It loads the dog breed predictoin model previously saved
+    '''
     global dog_names
     global face_cascade, ResNet50_model, dog_breed_model
     global graph
@@ -181,6 +188,13 @@ def my_Xc_predict_breed(img_path):
     return predicted_breed
 
 def show_image(img_path):
+    '''
+    This functionplots an image
+
+    Input: a path to an image
+
+    Output:  The image
+    '''
     # PLot the image
     img = cv2.imread(img_path)
     rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -232,12 +246,20 @@ def image_predictor(img_path):
 def allowed_file(filename):
     '''
     Check if filename has an allowed extension
+
+    Input: a file name
+
+    Output:  True or False depending if the filextensoinis in the allowed extensions list
     '''
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def rename_file(filename):
     '''
     rename a file from name.ext to image.ext
+
+    Input:  a file name
+
+    Output: a file named image with the extension of the input file
     '''
 
     new_name = 'image.' + filename.rsplit('.', 1)[1].lower()
