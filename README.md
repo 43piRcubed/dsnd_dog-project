@@ -24,7 +24,7 @@
 
 ## Dog Breed Classifier  -  Project Overview
 
-This project provides the user with the ability to predict the breedof a dog from an image selected from their computer.  It consists of 2 part:
+This project provides the user with the ability to predict the breed of a dog from an image selected from their computer.  It consists of 2 part:
 1. The derivation of a convolutional neural network to predict the dog breed.  tis portion is using jupyter notebook.
 2. A simple web application that allows the user to select an image which is the previewed on the page and upon submitting the image the dog breed will be predicted and displayed on the page. 
 
@@ -39,6 +39,8 @@ The algorithm built will, given an image of a dog, provide an estimate of its br
 <a id='instructions'></a>
 
 ## Project Instructions
+
+The write up for this project can be found in my [Medium Blog](https://pirsqred.medium.com/dog-breed-classification-2800e08f694b).
 
 ### Instructions
 
